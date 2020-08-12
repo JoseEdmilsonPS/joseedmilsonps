@@ -11,35 +11,67 @@ body {
 
 /* Header/Blog Title */
 .header {
-  padding: 30px;
+  padding: 10px;
   text-align: center;
   background: white;
 }
 
 .header h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 /* Style the top navigation bar */
+
 .topnav {
   overflow: hidden;
   background-color: rgb(156, 4, 4);
+  height: 50px;
 }
 
 /* Style the topnav links */
+
 .topnav a {
   float: left;
-  display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 4px 12px;
+  margin: auto;
   text-decoration: none;
+
+}
+
+nav#princmenu {
+  display: block;
+}
+
+nav#princmenu ul {
+  list-style: none;
+  text-transform: uppercase;
+  background-attachment: blue;
+}
+
+nav#menu li {
+  display: inline-block;
+	padding: 5px;
+	margin: 2px;
+	-webkit-transition:background-color 1s;
+    -moz-transition:background-color 1s;
+    -o-transition:background-color 1s;
+    transition:background-color 1s;
 }
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: rgb(179, 17, 17);
+  text-decoration: underline;
+  color: rgb(231, 238, 243);
+}
+
+/* FOTO TOPO */
+.header img#icone {
+	position: absolute;
+	left: 30px;
+  top: 45px;
 }
 
 /* Create two unequal columns that floats next to each other */
