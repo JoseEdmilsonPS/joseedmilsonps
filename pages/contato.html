@@ -145,15 +145,11 @@ input[type=submit]{
           </header>
         </article>
       </section>
-<<<<<<< HEAD
-      <form class="formulario" action="mailto: edm.estatistica@gmail.com" method="post" > <!-- name="form_contato" --> 
-||||||| merged common ancestors
-      <form class="formulario" action="enviaForm.php" name="form_contato" method="post" > 
-=======
-      <form action="http://formspree.io/mundoestatistico@gmail.com"><input type="email" name="_replyto"><textarea name="body"></textarea><input type="submit" value="Send"></form>
-      <!--- <form class="formulario" action="mailto:edm.estatistica@gmail.com" name="form_contato" method="post" > -->
->>>>>>> 049820a0f7f8917a1e647902bc477d7e9007477a
-        <fieldset id="usuario">
+      <!--
+      <form class="formulario" action="mailto: edm.estatistica@gmail.com" method="post" name="form_contato">
+      <form class="formulario" action="enviaForm.php" name="form_contato" method="post" > -->
+      <form action="https://formspree.io/xnqgkqlp" method="POST">
+         <fieldset id="usuario">
           <legend>Identificação do Usuário</legend>
           <p><label for="cNome">Nome:</label>
             <input type="text" name="tNome" id="cNome" size="20" maxlength="30"placeholder="Nome Completo" required/>
@@ -174,7 +170,9 @@ input[type=submit]{
             <p><label for="cMsg">Mensagem:</label>
               <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem" required></textarea></p>
         </fieldset>
-        <input type="submit" name="acao" value="enviar">
+          <input type="text" name="_gotcha" style="display:none" /> <!--evitar spam-->
+          <input type="hidden" name="_next" value="https://joseedmilson.github.io" />
+       <input type="submit"  value="Enviar">
       </form>
     </div>
   </div>
