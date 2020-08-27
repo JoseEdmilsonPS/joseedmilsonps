@@ -148,7 +148,7 @@ input[type=submit]{
       <!--
       <form class="formulario" action="mailto: edm.estatistica@gmail.com" method="post" name="form_contato">
       <form class="formulario" action="enviaForm.php" name="form_contato" method="post" > -->
-      <form action="http://formspree.io/mundoestatistico@gmail.com" method = "POST">
+      <form action="http://formspree.io/mundoestatistico@gmail.com" method = "post">
          <fieldset id="usuario">
           <legend>Identificação do Usuário</legend>
           <p><label for="cNome">Nome:</label>
@@ -170,7 +170,11 @@ input[type=submit]{
             <p><label for="cMsg">Mensagem:</label>
               <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem" required></textarea></p>
         </fieldset>
-        <input type="submit" name="acao" value="enviar">
+          <input type="text" name="_gotcha" style="display:none" /> <!--evitar spam-->
+          <input type="hidden" name="_next" value="https://joseedmilson.github.io" />
+
+
+        <input type="submit"  value="Enviar">
       </form>
     </div>
   </div>
