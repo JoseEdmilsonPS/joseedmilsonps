@@ -10,4 +10,4 @@ Também aqui é onde estou fazendo minha Home page, divulgando os canais que est
 
 Estou aberto a propostas, ajudas e correções dos materiais criados.
 
-![Mundo Estatístico](/imagem/nomoMe.png)
+![Mundo Estatístico](https://github.com/joseedmilson/joseedmilson.github.io/imagem/nomoMe.png)
