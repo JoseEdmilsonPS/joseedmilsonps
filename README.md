@@ -10,4 +10,4 @@ Também aqui é onde estou fazendo minha Home page, divulgando os canais que est
 
 Estou aberto a propostas, ajudas e correções dos materiais criados.
 
-<img src ="https://github.com/joseedmilson/joseedmilson.github.io/blob/master/imagem/nomoME.png" width = 150px height= 150px>
+<img src ="https://github.com/joseedmilson/joseedmilson.github.io/blob/master/imagem/nomoME.png" width = 270px height= 270px>
