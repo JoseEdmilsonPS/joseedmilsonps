@@ -10,4 +10,4 @@ Também aqui é onde estou fazendo minha Home page, divulgando os canais que est
 
 Estou aberto a propostas, ajudas e correções dos materiais criados.
 
-<img str="imagem/nomoMe.png">
+![Mundo Estatístico]("imagem/nomoMe.png")
