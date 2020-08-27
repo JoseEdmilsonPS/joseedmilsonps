@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta language = "pt-br">
+    <meta name="author" content="José Edmilson Pereira da Silva" >
+    <meta name="descrition" content=" Page de Estatística" >
+    <meta name="keywords" content="'José Edmilson', 'ciência de dados', estatística,'mundo estatistico', joseedmilson">
+    
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <title>Estatística - JEPS </title>
 <!--=============================================-->
@@ -60,8 +64,61 @@
         .formulario{
           width:500px;
           min-height:175px;
-          color:#999;
+          padding: 25px;
+          color:rgb(88, 83, 83);
           margin:auto;
+          border:1px solid #ccc;
+}
+.formulario p{
+    width: 100%;
+    font-size: 1em;
+}
+.field{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.field label, .field legend{
+    padding-left: 5px;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+    }
+.radiobox label{
+    width: auto;
+    display: inline-block;
+}
+input[type=text],
+input[type=email],
+textarea{
+    width: 95%;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+input#nao{
+    margin-left: 30px;
+}
+textarea{
+    line-height: 20px;
+    padding: 10px;
+    height: 90px;
+    resize: none;
+}
+input[type=submit]{
+    display: block;
+    background-color: #ccc;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
 }
         </style>
         
@@ -88,11 +145,11 @@
           </header>
         </article>
       </section>
-      <form class="formulario" action="enviaForm.php" name="form_contato" method="post" > 
+      <form class="formulario" action="mailto: edm.estatistica@gmail.com" method="post" > <!-- name="form_contato" --> 
         <fieldset id="usuario">
           <legend>Identificação do Usuário</legend>
           <p><label for="cNome">Nome:</label>
-            <input type="text" name="tNome" id="cNome" size="20" maxlength="30"placeholder="Nome Completo"/>
+            <input type="text" name="tNome" id="cNome" size="20" maxlength="30"placeholder="Nome Completo" required/>
           </p>
           <p><lable>E-mail:</label>
             <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="Digite seu E-Mail*" required/>
@@ -103,19 +160,14 @@
             <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label>
         </div>
         </fieldset>
-        <fieldset id="sexo">
-          <legend>Sexo</legend>
-          <input type="radio" name="tSexo" id="cMasc" checked/><label for="cMasc">Masculino</label></br>
-          <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
-        </fieldset>
         <fieldset id="mensagem">
           <legend>Mensagem do Usuário</legend>
           <p><label for="cUrg">Grau de Urgência:</label>
             Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Máx</p>
             <p><label for="cMsg">Mensagem:</label>
-              <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+              <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem" required></textarea></p>
         </fieldset>
-        <input type="submit" name="enviaForm" value="enviar">
+        <input type="submit" name="acao" value="enviar">
       </form>
     </div>
   </div>
