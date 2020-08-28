@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta language = "pt-br">
+    
+    <meta name="author" content="José Edmilson Pereira da Silva" />
+    <meta name="keyword" content="'ciência de dados', 'estatistica', 'dados', 'categóricos', 'josedmilson'" />
+
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <title>Estatística - JEPS </title>
 <!--=============================================-->
@@ -56,25 +60,66 @@
           background-color: #ba001f;
           color: white;
         }
+        /*CONFIGURANDO Layout CODIGOS*/
+        .cod {
+          background-color: #362d2d;
+          width: 90%;
+          padding: 10px;
+          margin: 10px;
+          box-shadow: 1px 1px 10px rgb(0, 225, 255);
+
+        }
+        code {
+          font-family: Consolas,"courier new";
+          color: rgb(15, 241, 223);
+          padding: 2px;
+          font-size: 75%;
+          text-align: left;
+        }
+
+          .citacao {
+            font-size: 75%;
+            text-decoration: darkgrey;
+          }
+          .header-text {
+            width: 100%;
+            height: 40%;
+          	min-height: 250px;
+          	background-image: url(../imagem/imgheader.jpg);
+	          background-size: cover;
+            background-position: center;
+	          display: flex;
+          	flex-direction: column;
+            position: relative;
+            }
+
+          
+            .header-text h1 {
+              color: rgb(238, 237, 225);
+              text-align: center;
+              margin:  100px;
+              font-size: 35pt;
+              text-shadow: 3px 3px rgb(8, 11, 163);
+            }
+
         </style>
         
-</head>
-<body>
-  <div class="header">
-    <h1>José Edmilson Pereira da Silva</h1>
-    <h3>Eterno estudante dos dados.</h3>
-    <img id="fotopeq" src="../imagem/fotopeq.png" alt="">
-</div>
-<div class="topnav">
-  <a href="../index.html">Home</a>
-    <a href="estatistica.html">Estatística </a>
-    <a href="consult.html">Consultoria</a>
-    <a href="curriculo.html">Curriculum</a>
-    <a href="contato.html" style="float:right">Contato</a>
-</div>
-<div class="row">
-    Div class "row"
-    <div class="clearfix">
+  </head>
+  <body>
+    <div class="header">
+      <h1>José Edmilson Pereira da Silva</h1>
+      <h3>Eterno estudante dos dados.</h3>
+      <img id="fotopeq" src="../imagem/fotopeq.png" alt="">
+    </div>
+    <div class="topnav">
+      <a href="../index.html">Home</a>
+      <a href="estatistica.html">Estatística </a>
+      <a href="consult.html">Consultoria</a>
+      <a href="curriculo.html">Curriculum</a>
+      <a href="contato.html" style="float:right">Contato</a>
+    </div>
+    <div class="row-cd">
+      <div class="clearfix">
         <div class="column sidemenu">
           <ul>
             <li><a href="descritiva.html">Estatística Descritiva</a></li>
@@ -85,26 +130,618 @@
             <li><a href="story.html">StoryTelling</a></li>
             <li><a href="https://mundoestatistico.github.io/" class="active">Mundo Estatístico</a></li>
           </ul>
-        </div>
-      
+        </div> <!--The end sidemenu-->
         <div class="column content">
-          <div class="header">
-            <h1>Ciência de Dados </h1>
+          <div class="header-text">
+            <h1>Dados Categoricos</h1>
+            
           </div>
-          <h2>Em construção em breve teremos novidades! </h2>
-        
-        <figure class="foto-legenda">
-            <img src="../imagem/mundo2.jpg"> <!-- colaca imagem no corpo do pagina -->
-            <figcaption> Estatística descomplicada</figcaption> <!--Legenda-->
-        </figure>
-        </div>
-      </div>
-      
-</div>
-  <div>
-    <footer id="rodape">Copyright &copy; 2020 - by JEP (José Edmilson Pereira da Silva)
+          <article>
+            <div>
+              <h3>Estudo para verificar o que determina a Qualidade do Vinho</h3>
+            </div>
+            <div class="conteudo">
+              <p>Neste exemplo, estaremos trabalhando dados categóricos e como extrair informações relevantes com uso de técnicas apropriada para estes tipos de dados. Vamos usar o dataset <b>winequality-red</b> para verificar  a qualidade do vinho e quais variáveis são importantes para determinar a sua qualidade.</p>
+              <p>O dataset original pode ser encontrado no repositório de Machine Learning da  UCI, disponível na pagina <a href="">https://archive.ics.uci.edu/ml/datasets/wine+quality</a></p>
+              <p>Neste estudo iremos fazer as análises com o uso da Linguagem R. </p>
+
+              <div>
+                <p>Descrição do Dataset</p>
+                <p>Número de instâncias : vinho tinto - 1599   </p>
+                <p>Número de atributos :11 + atributo de saída </p>
+                <p>Informações sobre atributos : Informações sobre atributos: Para mais informações, leia [Cortez et al., 2009]</p> 
+                <div class="citacao">
+                  <cite>  P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.Modeling wine preferences by data mining from physicochemical properties.In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.</cite>
+                </div>
+              </div>
+
+              <table>
+                <thead> <th> </th></thead>
+                <thead>
+                    <th> </th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+              </table>
+              <ol>Variáveis de entrada (baseadas em testes físico-químicos):
+                <li>1 - acidez fixa</li>
+                <li>2 - acidez volátil</li>
+                <li>3 - ácido cítrico</li>
+                <li>4 - açúcar residual</li>
+                <li>5 - cloretos</li>
+                <li>6 - dióxido de enxofre livre</li>
+                <li>7 - dióxido de enxofre total</li>
+                <li>8 - densidade</li>
+                <li>9 - pH</li>
+                <li>10 - sulfatos</li>
+                <li>11 - álcool</li>
+                <li>12 - qualidade (pontuação entre 0 e 10) - Variável de saída (com base em dados sensoriais):</li>
+              </ol>
+              <div class="prim">
+                <h3> 1. Preparar banco de dados</h3>
+                <p>Verificando se há NAs</p>
+                <div class="cod">
+                  <pre><code color>
+                    # verificando se ha valores ausentes
+                    any(is.na(wine))
+                
+                    ## [1] FALSE
+                  </code></pre>
+                </div>
+                
+                <p>Usando a função acima verificou-se que o dataset não possui dados faltantes</p>
+
+                <h3>Analisando os dados.</h3>
+                <p>Podemos verificar o resumo dos dados escalonados com a função summary</p>
+                <div class="cod">
+                  <pre>
+                    <code>
+                      summary(wine)
+                      ##  fixed.acidity   volatile.acidity  citric.acid      
+                      ##  Min.   : 4.60   Min.   :0.1200   Min.   :0.000    
+                      ##  1st Qu.: 7.10   1st Qu.:0.3900   1st Qu.:0.090     
+                      ##  Median : 7.90   Median :0.5200   Median :0.260     
+                      ##  Mean   : 8.32   Mean   :0.5278   Mean   :0.271   
+                      ##  3rd Qu.: 9.20   3rd Qu.:0.6400   3rd Qu.:0.420     
+                      ##  Max.   :15.90   Max.   :1.5800   Max.   :1.000    
+                      ##    
+                      ## residual.sugar   chlorides       free.sulfur.dioxide  
+                      ## Min.   : 0.900  Min.   :0.01200   Min.   : 1.00  
+                      ## 1st Qu.: 1.900  1st Qu.:0.07000   1st Qu.: 7.00
+                      ## Median : 2.200  Median :0.07900   Median :14.00
+                      ## Mean   : 2.539  Mean   :0.08747   Mean   :15.87 
+                      ## 3rd Qu.: 2.600  3rd Qu.:0.09000   3rd Qu.:21.00 
+                      ## Max.   :15.500  Max.   :0.61100   Max.   :72.00
+              
+                      total.sulfur.dioxide density              pH       
+                      ## Min.   :  6.00    Min.   :0.9901  Min.   :2.740
+                      ## 1st Qu.: 22.00    1st Qu.:0.9956  1st Qu.:3.210 
+                      ## Median : 38.00    Median :0.9968  Median :3.310 
+                      ## Mean   : 46.47    Mean   :0.9967  Mean   :3.311
+                      ## 3rd Qu.: 62.00    3rd Qu.:0.9978  3rd Qu.:3.400 
+                      ## Max.   :289.00    Max.   :1.0037  Max.   :4.010 
+                      
+                      ## sulphates         alcohol         quality     
+                      ## Min.   :0.3300   Min.   : 8.40   Min.   :3.000  
+                      ## 1st Qu.:0.5500   1st Qu.: 9.50   1st Qu.:5.000  
+                      ## Median :0.6200   Median :10.20   Median :6.000  
+                      ## Mean   :0.6581   Mean   :10.42   Mean   :5.636  
+                      ## 3rd Qu.:0.7300   3rd Qu.:11.10   3rd Qu.:6.000  
+                      ## Max.   :2.0000   Max.   :14.90   Max.   :8.000
+                  </code></pre>
+                </div>
+                <h3>Criandos as Classes/Grupos.</h3>
+                <div class="cod">
+                  <pre><code>
+                    # criando nova variavel qualidade como fator
+
+                  wine &lt;- wine %&gt;%
+                      mutate(qualidade = case_when(quality &gt;= 7 ~ "Boa",
+                                                   quality  == 5 ~ "Regular",
+                                                   quality  == 6 ~ "Regular",
+                                                   quality  &lt;= 4 ~ "Ruim")) %&gt;%
+                      mutate(qualidade = as.factor(qualidade)) %&gt;%
+                      select(!quality) # exclui a coluna, selecionando só o 
+                      complemento.
+                  </code></pre>
+                </div>
+                <p>Agora que já temos nossas classes criadas que será nossa variável resposta (target), vamos estabelecer as subamostra  de treino(80%) e teste(20%), como segue abaixo:</p>
+                <div class="cod">
+                  <pre><code>
+                      
+                    set.seed(50) # Cria semente 
+                    
+                    # Total de linhas (nrow) dos dados 
+                    n &lt;- nrow(wine)
+                    
+                    # Escolha aleatoriamente 80% das linhas (já está feito)
+                    ind &lt;- sample(n, size = n * 0.8)
+
+                    # Criar dados treino - linhas escolhidas aleatoriamente
+                    treino &lt;- wine[ind,]
+                    
+                    # Crie os dados teste
+                    teste &lt;- wine[-ind,]
+                    
+                    # Salve as classes corretas de crime dos dados teste
+                    classes_corretas &lt;- teste$qualidade
+                  </code></pre>
+                </div>
+              </div>
+              <div class="seg">
+                <h3>2. Pressupostos do teste - LDA</h3>
+                <h4>a. Normalidade das variáveis independentes.</h4>
+                <ul>
+                  <li>shapiro.test(…)
+                    <div class="cod">
+                      <pre><code>
+                        # Normalidade
+                        par(mfrow=c(3,4))
+                        qualy&lt;-levels(treino$qualidade)
+                        for (i in 1:3){
+                          for (j in 1:4){
+                            qqnorm(treino[,j][treino$qualidade==qualy[i]])
+                            qqline(treino[,j][treino$qualidade==qualy[i]])
+                            }
+                            }
+                      </code></pre>
+                    </div>
+                    <img src="../imagem/normalidade.png" alt="">
+                    
+                    <p>Avaliar se é Distribuição Normal - Shapiro.test</p>
+                    <div class="cod">
+                      <pre><code>
+                        # shapiro.test(treino[treino$qualidade=="alto",3])
+                        for (i in 1:11){
+                          print(shapiro.test(treino[,i]))
+                          print(i)
+                          }
+
+                        ## 
+                        ##  Shapiro-Wilk normality test
+                        ## 
+                        ## data:  treino[, i]
+                        ## W = 0.94035, p-value &lt; 2.2e-16
+                        ## 
+                        ## [1] 1
+                        ## 
+                        ##  Shapiro-Wilk normality test
+                        ## 
+                        ## data:  treino[, i]
+                        ## W = 0.97218, p-value = 5.545e-15
+                        ## 
+                        ## [1] 2
+                        ## .       .      .  
+                        ## .       .      .  
+                        ## .       .      .  
+                        
+                        ## 
+                        ##  Shapiro-Wilk normality test
+                        ## 
+                        ## data:  treino[, i]
+                        ## W = 0.92701, p-value &lt; 2.2e-16
+                        ## 
+                        ## [1] 11
+                      </code></pre>
+                    </div>
+                    <p>Avaliar a Hipótese</p>
+                    <p>H0: Disribuições são normais = 0, normalidade</p>
+                    <p>H1: Distribuições não são normais != 0, não normalidade</p>
+                    <p>Se p&gt;0.05 Distribuição não são normal</p>
+                  </li>
+                </ul>
+                <p>Confirmamos que as variáveis não possuem normalidade (Distribuição Normal).</p>
+                <h4>b. Multicolinearidade entre variáveis independentes</h4>
+                <p>Para verificar se existem correlações entre as covariáveis iremos utilizar a fução ggpairs do package(GGally), a função corrplot e gpairs.painel do package(psych).</p>
+                <div class="cod">
+                  <pre><code>
+                    corrplot(cor(wine[1:11]), type="upper")
+                  </code></pre>
+                </div>
+                <img src="../imagem/corrplot.png" alt="">
+
+                <div class="cod">
+                  <pre><code>
+                    correlacao &lt;- cor(treino[,-12]);
+                    dissimilaridade &lt;- 1 - abs(correlacao);
+                    distancia &lt;- as.dist(dissimilaridade);
+                    hc &lt;- hclust(distancia)  
+                    grupos &lt;- cutree(hc,h=0.05)
+                    grupos
+
+                    ## fixed.acidity   volatile.acidity     citric.acid 
+                    ##   1                    2                    3 
+                    ## residual.sugar     chlorides  free.sulfur.dioxide 
+                    ##   4                    5                6 
+                    ## total.sulfur.dioxide  density            pH 
+                    ##   7                     8                 9 
+                    ## sulphates              alcohol 
+                    ##    10                   11
+                  </code></pre>
+                </div>
+                <div>
+                  Checando Multicolinariedade
+                  Verificamos correlação moderada nas variáveis (volatile.acidity-citric.acid). Com a função cutree, porém não se confirma.
+                </div>
+
+                <h4> c. Checancando se possui linearidade</h4>
+
+                <div class="cod">
+                  <pre><code>
+                    treino %&gt;% 
+                    GGally::ggpairs(columns=1:6, aes(color=qualidade))
+                  
+                  </code></pre>
+                </div>
+                <img src="../imagem/ggpairs.png" alt="">
+                <div class="cod">
+                  <pre><code>
+                    treino %&gt;% 
+                    GGally::ggpairs(columns=7:12, aes(color=qualidade))
+                  
+                  </code></pre>
+                </div>
+                <img src="../imagem/ggpairs2.png" alt="">
+                <div class="cod">
+                  <pre><code>
+                    library(psych)
+                    pairs.panels(wine[1:12],
+                                gap=0,
+                                bg= c("red", "green", "blue")
+                                [wine$qualidade], pch=2)
+                  </code></pre>
+                </div>
+                <img src="../imagem/pysichPanel.png" alt="">
+                
+                <h4>d. Matrizes de dispersão são iguais? </h4>
+                <div class="cod">
+                  <pre><code>
+                    heplots::boxM(cbind(x1,x2,…), Y)
+                    res&lt;- boxM(wine[,1:11], wine[,"qualidade"])
+                    res
+
+                    ## Box's M-test for Homogeneity of Covariance Matrices
+                    ## 
+                    ## data:  wine[, 1:11]
+                    ## Chi-Sq (approx.) = 538.5, df = 132, p-value &lt; 2.2e-16</code></pre>
+                  </code></pre>
+                </div>
+                <p>Não lineares</p>
+                <div>
+                  Avaliação: 
+                    <li> H0: Matrizes de dispersão(Var-Covar) = 0, são iguais. </li>
+                    <li>H1: Matrizes de dispersão(Var-Covar) != 0, não são iguais </li>
+                    <li>logo, p&lt;0.05 Matrizes de Var-Covar não são iguais. </li>
+
+                    <p> OBS: Como verificamos vários pressupostos não foram atendido, o LDA não é a técnica indicada a ser utilizada neste conjunto de dados, 
+                    Usaremos QDA.</p>
+                </div>
+                <div>
+                  <h3>3. Construir o modelo (nesse caso: QDA)</h3>
+                  <div class="cod">
+                    <pre><code>
+                      # Modelo QDA: MASS::qda(Y~x1+x2…, data=dados)
+                      
+                      qda_wine &lt;- qda(qualidade ~ ., data = wine )
+                      qda_wine
+
+                      ## Call:
+                      ## qda(qualidade ~ ., data = wine)
+                      ## 
+                      ## Prior probabilities of groups:
+                      ##        Boa    Regular       Ruim 
+                      ## 0.13570982 0.82489056 0.03939962 
+                      ## 
+                      ## Group means:
+                      ##    fixed.acidity volatile.acidity citric.acid residual.sugar  
+                      ## Boa     8.847005   0.4055300      0.3764977       2.708756 
+                      ## Regular 8.254284   0.5385595      0.2582638       2.503867 
+                      ## Ruim    7.871429   0.7242063      0.1736508       2.684921 
+                      ##
+                      ## chlorides  free.sulfur.dioxide total.sulfur.dioxide density
+                      ## 0.07591244  13.98157             34.88940           0.9960303
+                      ## 0.08897271  16.36846             48.94693           0.9968673
+                      ## 0.09573016  12.06349             34.44444           0.9966887
+                      ##
+                      ##           pH     sulphates  alcohol
+                      ## Boa     3.288802 0.7434562  11.51805
+                      ## Regular 3.311296 0.6472631  10.25272
+                      ## Ruim    3.384127 0.5922222  10.21587
+                    </code></pre>
+                  </div>
+                  <div>A saída contém as médias do grupo. Mas ele não contém os coeficientes dos discriminantes lineares, porque o classificador QDA envolve uma função quadrática, e não linear, dos preditores. A predict() função funciona exatamente da mesma maneira que para o LDA.              </div>
+                  <h3>Predições e tabela confusão-Teste</h5>
+                    
+                  <div class="cod">
+                    <pre><code>
+                      predictions_QDA = data.frame(predict(qda_wine, teste))
+                      
+                      predictions_QDA = cbind(teste, predictions_QDA)
+
+                      predictions_QDA %&gt;%
+                        count(class, qualidade)
+                        
+                      ## # A tibble: 8 x 3
+                      ##   class   qualidade     n
+                      ##   &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;
+                      ## 1 Boa     Boa          32
+                      ## 2 Boa     Regular      27
+                      ## 3 Boa     Ruim          1
+                      ## 4 Regular Boa          16
+                      ## 5 Regular Regular     217
+                      ## 6 Regular Ruim         13
+                      ## 7 Ruim    Regular      13
+                      ## 8 Ruim    Ruim          1
+
+                    </code></pre>
+                  </div>
+                  <h3>Acuracia do modelo - teste</h3>
+
+
+                  <div class="cod">
+                    <pre><code>
+                      predictions_QDA %&gt;%
+                        summarize(score = mean(class == qualidade))
+                      
+                      ##     score
+                      ## 1 0.78125
+                    </code></pre>
+                  </div>
+                  <h3>Outra forma de construção Tabela Confusão</h3>
+                  
+                  <div class="cod">
+                    <pre><code>
+                      table(predict(qda_wine)$class, wine$qualidade)
+                        
+                      ##          
+                      ##            Boa Regular Ruim
+                      ##   Boa      139     138    2
+                      ##   Regular   77    1138   46
+                      ##   Ruim       1      43   15
+                    </code></pre>
+                  </div>
+
+                  <h3>QDA com pacote caret()</h3>
+                  <h3>Modelo treino</h3>
+
+                  <div class="cod">
+                    <pre><code>
+                      # library(caret)
+                      fit_qda = qda(qualidade ~., data=treino)
+                      
+                      coef(fit_qda)
+                      
+                      ## NULL
+                    </code></pre>
+                  </div>
+
+                  <h3>checando o modelo-treino</h3>
+                  <div class="cod">
+                    <pre><code>
+                    summary(fit_qda)
+                    
+                    ##         Length Class  Mode     
+                    ## prior     3    -none- numeric  
+                    ## counts    3    -none- numeric  
+                    ## means    33    -none- numeric  
+                    ## scaling 363    -none- numeric  
+                    ## ldet      3    -none- numeric  
+                    ## lev       3    -none- character
+                    ## N         1    -none- numeric  
+                    ## call      3    -none- call     
+                    ## terms     3    terms  call     
+                    ## xlevels   0    -none- list
+                    </code></pre>
+                  </div>
+                  <div>Diferentemente da LDA, a QDA considera que cada classe tem sua própria matriz de variância ou covariância, em vez de ter uma matriz comum.
+                    Treinar dados com uma funçao qda()
+                  </div>
+                  <h3>Predição dos dados do teste, criando base de teste</h3>
+
+                  <div class="cod">
+                    <pre><code>
+                      # predição(treino, teste)
+                      pred_qda = predict(fit_qda, teste[,-12])
+
+                      data.frame(original=teste$qualidade, pred=pred_qda$class)
+                      
+                      ##     original    pred
+                      ## 1    Regular Regular
+                      ## 2    Regular Regular
+                      ## 3       Ruim Regular
+                      ## 4    Regular Regular
+                      ## 5    Regular Regular
+                      ## 6    Regular Regular
+                      ## .     .      .
+                      ## .     .      .
+                      ## .     .      .
+                      ## 316  Regular Regular
+                      ## 317  Regular Regular
+                      ## 318  Regular     Boa
+                      ## 319  Regular Regular
+                      ## 320  Regular Regular
+                    </code></pre>
+                  </div>
+                  <h3>Verificar a precisão com a matriz de confusão.</h3>
+
+                  <div class="cod">
+                    <pre><code>
+                      confusionMatrix(teste$qualidade, pred_qda$class)
+                      
+                      ## Confusion Matrix and Statistics
+                      ## 
+                      ##           Reference
+                      ## Prediction Boa Regular Ruim
+                      ##    Boa      23      25    0
+                      ##    Regular  27     219   11
+                      ##    Ruim      1      14    0
+                      ## 
+                      ## Overall Statistics
+                      ##                                           
+                      ##                Accuracy    : 0.7562          
+                      ##                    95% CI  : (0.7054, 0.8023)
+                      ##     No Information Rate    : 0.8062          
+                      ##     P-Value [Acc &gt; NIR] : 0.9886          
+                      ##                                           
+                      ##                   Kappa : 0.2545          
+                      ##                                           
+                      ##  Mcnemar's Test P-Value : 0.6969          
+                      ## 
+                      ## Statistics by Class:
+                      ## 
+                      ##                      Class: Boa Class: Regular Class: Ruim
+                      ## Sensitivity             0.45098         0.8488     0.00000
+                      ## Specificity             0.90706         0.3871     0.95146
+                      ## Pos Pred Value          0.47917         0.8521     0.00000
+                      ## Neg Pred Value          0.89706         0.3810     0.96393
+                      ## Prevalence              0.15937         0.8063     0.03438
+                      ## Detection Rate          0.07187         0.6844     0.00000
+                      ## Detection Prevalence    0.15000         0.8031     0.04688
+                      ## Balanced Accuracy       0.67902         0.6180     0.47573
+
+                    </code></pre>
+                  </div>
+                  <div>
+                    <p>Teste teve acuracia de 79,06, com intervalo de confiança de 95% (0.74, 0.83).</p>
+                  </div>
+
+                  <h3> Previsão com traiControl() com um método qda</h3>
+                  <div class="cod">
+                    <pre><code>
+                      # caret training, TREINO
+                      trCtrl = trainControl(method = &quot;cv&quot;, number = 12)
+            
+                      fit_car = train(qualidade~., data=treino, method=&quot;qda&quot;, 
+                                     trControl = trCtrl, metric = &quot;Accuracy&quot;)
+                    </code></pre>
+                  </div>
+                  <h3>Vamos prever os dados do teste.</h3>
+
+                  <div class="cod">
+                    <pre><code>
+                      # predição (treino, teste)
+                      pred_car = predict(fit_car, teste[,-12])
+
+                      data.frame(original=teste$qualidade, pred=pred_car)
+
+                      ##     original    pred
+                      ## 1    Regular Regular
+                      ## 2    Regular Regular
+                      ## 3       Ruim Regular
+                      ## 4    Regular Regular
+                      ## 5    Regular Regular
+                      ## 6    Regular Regular
+                      ## .     .        .
+                      ## .     .        .
+                      ## .     .        .
+                      ## 316  Regular Regular
+                      ## 317  Regular Regular
+                      ## 318  Regular     Boa
+                      ## 319  Regular Regular
+                      ## 320  Regular Regular
+
+                    </code></pre>
+                  </div>
+                  <h3>Verificar a precisão com uma matriz de confusão.</h3>
+
+                  <div class="cod">
+                    <pre><code>
+                      # teste
+                      confusionMatrix(teste$qualidade, pred_car)
+
+                      ## Confusion Matrix and Statistics
+                      ## 
+                      ##           Reference
+                      ## Prediction Boa Regular Ruim
+                      ##    Boa      23      25    0
+                      ##    Regular  27     219   11
+                      ##    Ruim      1      14    0
+                      ## 
+                      ## Overall Statistics
+                      ##                                           
+                      ##                Accuracy : 0.7562          
+                      ##                  95% CI : (0.7054, 0.8023)
+                      ##     No Information Rate : 0.8062          
+                      ##  P-Value [Acc &gt; NIR] : 0.9886          
+                      ##                                           
+                      ##                   Kappa : 0.2545          
+                      ##                                           
+                      ##  Mcnemar's Test P-Value : 0.6969          
+                      ## 
+                      ## Statistics by Class:
+                      ## 
+                      ##                      Class: Boa Class: Regular Class: Ruim
+                      ## Sensitivity             0.45098         0.8488     0.00000
+                      ## Specificity             0.90706         0.3871     0.95146
+                      ## Pos Pred Value          0.47917         0.8521     0.00000
+                      ## Neg Pred Value          0.89706         0.3810     0.96393
+                      ## Prevalence              0.15937         0.8063     0.03438
+                      ## Detection Rate          0.07187         0.6844     0.00000
+                      ## Detection Prevalence    0.15000         0.8031     0.04688
+                      ## Balanced Accuracy       0.67902         0.6180     0.47573
+                    </code></pre>
+                  </div>
+                  <div>
+                    Valores muito próximo ao anterior, tivemos acuracia do modelo de 79,69, com intervalo de confiança de 95% (0.75, 0.84) 
+                  </div>
+                  
+                  <h3>Previsão com MDA</h3>
+                  
+                  <div class="cod">
+                    <pre><code>
+                      library(mda)
+                      mda_wine&lt;- mda(qualidade ~., data = wine)
+                      mda_wine
+
+                      ## Call:
+                      ## mda(formula = qualidade ~ ., data = wine)
+                      ## 
+                      ## Dimension: 8 
+                      ## 
+                      ## Percent Between-Group Variance Explained:
+                      ##     v1     v2     v3     v4     v5     v6     v7     v8 
+                      ##  74.15  88.27  96.48  98.34  99.11  99.68  99.97 100.00 
+                      ## 
+                      ## Degrees of Freedom (per dimension): 12 
+                      ## 
+                      ## Training Misclassification Error: 0.1676 ( N = 1599 )
+                      ## 
+                      ## Deviance: 1340.27
+
+                    </code></pre>
+                  </div> 
+                  <h3>Tabela</h3>
+                  <div class="cod">
+                    <pre><code>
+                      table(predict(mda_wine, wine[,1:11]),wine$qualidade)
+                      ##          
+                      ##            Boa Regular Ruim
+                      ##   Boa      102      72    1
+                      ##   Regular  115    1217   50
+                      ##   Ruim       0      30   12
+                    </code></pre>
+                  </div>
+                  <h3>4. Interprete os coeficientes</h3>
+                  <div>
+                    Nos dois metodos pacote (MASS) e pacote (caret) teve a mesma predição.
+                    Ambos com acuracia em torno 79%, com intervalo de confiança de 95% (0.75, 0.84)
+                    Verificamos pela matriz de confusão um maior acerto nas categoria &quot;Regular&quot; e maior erro na categoria &quot;Ruim&quot;, o mesmo e verificado com o MDA. 
+                  </div>
+            
+        </div> <!--The end content-->
+      </div> <!--The end clearfix-->
+    </div> <!--The end row-cd-->
+    <div class="footer">
+      <footer id="rodape">Copyright &copy; 2020 - by JEP (José Edmilson Pereira da Silva)
              <br><a href="#">Facebook</a> | <a href="https://www.linkedin.com/in/jos%C3%A9-edmilson-pereira/">Linkedin</a> | <a href="https://mundoestatistico.github.io/">Mundo Estatístico</a>
-     </footer>
-    </div> 
-</body>
+      </footer>
+    </div>  <!--The end footer-->
+  </body>
 </html>
