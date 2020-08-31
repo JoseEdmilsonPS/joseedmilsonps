@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta language = "pt-br">
+    
+    <meta name="author" content="José Edmilson Pereira da Silva" />
+    <meta name="keyword" content="'ciência de dados', 'estatistica', 'dados', 'categóricos', 'josedmilson'" />
+
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <title>Visualizacao - JEPS </title>
+<!--=============================================-->
+<!--Criando estilo da pagina "Estatistica-->
+<!--=============================================-->
+
+    <style>
+                        
+        .column {
+          float: left;
+          padding: 10px;
+          
+        }
+        
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        /*==============================*/
+        /* Configura page duas colunas*/
+        /*==============================*/
+        .sidemenu {
+          width: 22%;
+        }
+        
+        .content {
+          width: 73%;
+          border-left: 2px solid #f2f2f2;
+        }
+
+
+        /*==============================*/
+        /* Configura page visudados*/
+        /*==============================*/
+
+        
+        .header-visualtext {
+            width: 100%;
+            height: 40%;
+          	min-height: 250px;
+          	background-image: url(../imagem/headerME.png);
+	        background-size: cover;
+            background-position: center;
+	        display: flex;
+          	flex-direction: column;
+            position: relative;
+            }
+
+
+
+        .header-visualtext h1 {
+              color: rgb(202, 117, 5);
+              text-align: center;
+              margin-top:  320px;
+              font-size: 30pt;
+              text-shadow: 2px 1px rgb(25, 71, 23);
+            }
+
+        .conteudo {
+            float: left;
+            width: 98%;
+            padding: 12px;
+        }
+
+        .artigoprinc {
+            color: rgb(46, 48, 48);
+        }
+
+        .artigoprinc h2 {
+            color:  rgb(25, 71, 23);
+        }
+        
+
+        .artigo-body {
+            float: left;
+            margin-bottom: 15px;
+
+        }
+
+        .imgleft {
+            float:left;
+            width: 45;
+        }
+        
+        .conteudoright {
+            float: left;
+            width: 50%
+        } 
+
+        .criador {
+            font-size: 75%;
+            float: right;
+        }
+
+        /*==============================*/
+        /* Menu lateral*/
+        /*==============================*/
+
+        .sidemenu ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .sidemenu li a {
+          margin-bottom: 4px;
+          display: block;
+          padding: 8px;
+          background-color: #eee;
+          text-decoration: none;
+          color: #666;
+        }
+        
+        .sidemenu li a:hover {
+          background-color: rgb(156, 4, 4);;
+          color: white;
+        }
+        
+        .sidemenu li a.active {
+          background-color: #ba001f;
+          color: white;
+        }
+        /*CONFIGURANDO Layout CODIGOS*/
+        .cod {
+          background-color: #362d2d;
+          width: 90%;
+          padding: 10px;
+          margin: 10px;
+          box-shadow: 1px 1px 10px rgb(0, 225, 255);
+
+        }
+        code {
+          font-family: Consolas,"courier new";
+          color: rgb(15, 241, 223);
+          padding: 2px;
+          font-size: 75%;
+          text-align: left;
+        }
+
+        .citacao {
+            font-size: 75%;
+            text-decoration: darkgrey;
+          }
+        
+        .header-text {
+            width: 100%;
+            height: 40%;
+          	min-height: 250px;
+          	background-image: url(../imagem/headerME.png);
+	        background-size: cover;
+            background-position: center;
+	        display: flex;
+          	flex-direction: column;
+            position: relative;
+            }
+
+          
+
+        </style>
+        
+  </head>
+  <body>
+    <div class="header">
+      <h1>José Edmilson Pereira da Silva</h1>
+      <h3>Eterno aprendiz dos dados.</h3>
+      <img id="fotopeq" src="../imagem/logo176.png" alt="">
+    </div>
+    <div class="topnav">
+      <a href="../index.html">Home</a>
+      <a href="estatistica.html">Estatística </a>
+      <a href="consult.html">Consultoria</a>
+      <a href="curriculo.html">Curriculum</a>
+      <a href="contato.html" style="float:right">Contato</a>
+    </div>
+    <div class="row-cd">
+        <div class="clearfix">
+            <div class="column sidemenu">
+                <ul>
+                    <li><a href="python.html">Python</a></li>
+                    <li><a href="langR.html">Linguagem R</a></li>
+                    <li><a href="visuDados.html">Visulização de Dados</a></li>
+                    <li><a href="machine.html">Machine Le
+                        arning</a></li>
+                    <li><a href="story.html">StoryTelling</a></li>
+                    <li><a href="https://mundoestatistico.github.io/" class="active">Mundo Estatístico</a></li>
+                </ul>
+            </div> <!--The end sidemenu-->
+            <div class="column content">
+                <div class="header-visualtext">
+                    <h1>Visualização de Dados</h1>
+                </div>
+                <article class="artigoprinc">
+                    <div class="subtitulo">
+                        <h2>Usando ggplt2 no R</h2>
+                    </div>
+                    <div class="conteudo">
+                        <p> Muito importante na análise de dados é o poder dos gráficos, saber interpretá-los será de fundamental importância para se tirar os melhores insights - valor obtido com as análises, informações de valor reais que possibilitam novos negócios e melhores tomada de decisão. Não seria um exagero dizer que é uma arte a ser desenvolvida pelos profissionais que trabalham com dados. </p>
+                        <p>Neste artigo buscamos mostrar de maneira bem simples alguns tipos de gráficos desenvolvidos com o R utilizando o pacote ggplt2. Não temos a pretensão inicial das análises dos dados, mas sim mostrar a importância da visualização dos dados. Se precisar de mais informações e como construir os gráficos estará disponível o material completo no site <a href="https://mundoestatistico.github.io"> www.mundoestatistico.github.io</a>. Será utilizado o dadaset Melanoma contido no pacote MASS do R.</p>
+                    </div>
+                    <article class="artigo-body">    
+                        <div>
+                            <h2> 1. Gráfico de dispersão</h2>
+                        </div>
+                        <div class="imgleft">
+                            <img src="../imagem/disp.png" alt="">
+                        </div>
+                        <div class="conteudoright">
+                            <p>Neste tipo de gráfico as variáveis devem ser numéricas. O gráfico de dispersão é muito útil para verificar a relação entre duas variáveis, se existe alguma tendência entre ambas.</p>
+                        </div>
+                    </article>
+                    <article class="artigo-body">
+                        <div>
+                            <h2> 2. Gráfico boxplot</h2>
+                        </div>
+                        <div class="imgleft">
+                            <img src="../imagem/boxplot.png" alt="">
+                        </div>
+                        <div class="conteudoright">
+                            <p>O boxplot é um dos gráficos mais úteis para visualização da distribuição de dados numéricos. Neste tipo de gráficos podemos verificar a ocorrência de outliers, a distribuição dos dados, a simetria dos dados, a mediana, o primeiro e o terceiro quartis dos dados. Uma das variáveis deve ser numérica, é mais usado para comparar a distribuição de vários grupos. No entanto, você deve ter em mente que a distribuição de dados está oculta atrás de cada caixa.
+                            </p>
+                        </div>
+                    <article class="artigo-body">
+                        <div>
+                            <h2> 3. Gráfico de barra</h2>
+                        </div>
+                        <div class="imgleft">
+                            <img src="../imagem/barra.png" alt="">
+                        </div>
+                        <div class="conteudoright">
+                            <p>O gráfico de barra é um muito útil para visualização resumida de um conjunto de dados categóricos. Cada barra no gráfico representa uma categoria particular com sua frequência de dados. Um dos gráficos mais fáceis de interpretar. Podem ser utilizadas na vertical, também conhecido como gráfico de colunas, ou na horizontal.</p>
+                        </div>
+                    </article>
+                    <article class="artigo-body">
+                        <div>
+                            <h2>4. Gráfico histograma</h2>
+                        </div>
+                        <div class="imgleft">
+                            <img src="../imagem/histog.png" alt="">
+                        </div>
+                        <div class="conteudoright">
+                            <p>Muito útil para verificar se a variável tem distribuição normal, procedimento inicial para um modelo de machine learning, um modelo de regressão por exemplo, para aplicar um teste de hipóteses específico que necessita desse requisito. Também utilizado na detecção de outliers, ou seja, dados que podem interferir nos resultados da análise.</p>
+                        </div>
+                    </article>
+                    <article class="artigo-body">
+                        <div>
+                            <h2>5. Gráfico de Setor</h2>
+                        </div>
+                        <div class="imgleft">
+                            <img src="../imagem/setor.png" alt="">
+                        </div>
+                        <div class="conteudoright">
+                            <p>O gráfico de pizza (de setores) é um gráfico circular onde os valores de cada categoria representada são proporcionais às frequências (fatia da pizza). O gráfico de pizza é uma maneira de resumir a informação de uma variável qualitativa/categórica. Serve para comparar quantidades em cada categoria.</p>
+                        </div>
+                    </article>
+                    <div class="conteudo">
+                        <p>Hoje o mundo é digital, a cada instante é gerado grande quantidade de dados e por sua vez é de suma importância saber analisar estes dados transformando em informações para melhorar o mundo no qual estamos inseridos. Daí a necessidade de saber criar e interpretar estas informações de forma gráfica, aqui tentamos mostrar os principais tipos de gráficos e sua importância. A visualização de dados é uma forma de arte visual, é contar as histórias dos dados a partir de gráficos conhecendo tendências e exceções. </p>
+                        <p>Bom é isso, esses são alguns gráficos criado com ggplot2, o script vai estar la no site www.mundoestatistico.github.io se escrevi alguma bobeira, algo errado, deixe um comentário corrigindo ou mande um e-mail.</p>
+                       <p>edm.estatistica@gmail.com </p>
+                       <div class="criador">São Paulo, Agosto de 2020 - by JEPS</div>
+                    </div> <!--Conteudo-->
+                </article>
+            </div><!--column content-->
+        </div> <!--The end clearfix-->
+    </div> <!--The end row-cd-->
+    <div class="footer">
+      <footer id="rodape">Copyright &copy; 2020 - by JEP (José Edmilson Pereira da Silva)
+             <br><a href="#">Facebook</a> | <a href="https://www.linkedin.com/in/jos%C3%A9-edmilson-pereira/">Linkedin</a> | <a href="https://mundoestatistico.github.io/">Mundo Estatístico</a>
+      </footer>
+    </div>  <!--The end footer-->
+  </body>
+</html>
