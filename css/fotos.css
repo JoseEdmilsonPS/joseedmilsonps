@@ -1,0 +1,101 @@
+@charset "UTF-8" ;
+
+ul#album-fotos {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+    }
+
+ul#album-fotos li{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 5px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    /*efeito de zoom*/
+    -webkit-transition: all 1s ease-in;
+}
+
+ul#album-fotos li span {
+    opacity: 0;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgb(47, 3, 151);
+    background-color: rgba(28, 116, 199, 0.3);
+    font-size: 13pt;
+    line-height: 370px;
+    padding: 5px;
+}
+
+/*Fazer o zoom*/
+ul#album-fotos li:hover {
+    -webkit-transform: scale(1.5);
+} 
+
+ul#album-fotos li:hover span {
+    opacity: 1;
+}
+
+ul#album-fotos li#aula {
+    background: url('../imagem/aula.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #fff;
+    <a href='https://br.freepik.com/fotos/negocio'>Negócio foto criado por mindandi - br.freepik.com</a>
+}
+
+ul#album-fotos li#aula:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#trabAcad {
+    background: url('../imagem/trabAcad.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #fff;
+}
+
+ul#album-fotos li#trabAcad:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#pesq {
+    background: url('../imagem/pesq.png') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #fff;
+    <a href="https://br.freepik.com/fotos/negocio">Negócio foto criado por Racool_studio - br.freepik.com</a>
+}
+ul#album-fotos li#pesq:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#datasc {
+    background: url('../imagem/datasc.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #fff;
+    Imagem de <a href="https://pixabay.com/pt/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4313671">Gerd Altmann</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4313671">Pixabay</a>
+}
+ul#album-fotos li#datasc:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos li#html {
+    background: url('../imagem/html.png') no-repeat;
+    background-position: 50% 50%; /*centralizar */
+    background-size: 400px 400px;
+    background-color: #fff;
+}
+
+ul#album-fotos li#html:hover {
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
