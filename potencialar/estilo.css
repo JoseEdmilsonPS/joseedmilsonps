@@ -1,0 +1,267 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+@font-face {
+	font-family: 'FonteLogo';
+	src: url(../_fonts/bubblegum-sans-regular.otf);
+}
+body {
+	background-color:rgb(242, 250, 242);
+	font-family: Arial, sans-serif;
+	color: #000000;
+}
+
+div#interface {
+	width: 950px;
+	background-color: #ffffff;
+	margin: -15px auto 10px auto;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+	padding: 5px;
+}
+
+p {
+	text-align: justify; 
+	text-indent: 50px;
+}
+
+a {
+	color: #606060;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    left: 850px;
+	top: -10px;
+}
+
+header#cabecalho {
+	float: left;
+	border-bottom: 1px #606060 solid;
+	margin-top: 40px;
+    height: 120px;
+    background-color: cornflowerblue;
+	padding: 2px;
+	width: 947px;
+	
+    
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	
+
+}
+
+header#cabecalho h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 30pt;
+	color: #f8eeee;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+	padding: 0px;
+	margin-bottom: 0px;
+	
+}
+
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #f3ecec;
+	font-size: 15pt;
+	padding: 2px;
+	margin-top: 0px;
+	
+}
+/* Formatação de imagens com legendas */
+
+figure.foto-legenda {
+	position: relative;
+	border: 8px solid white;
+	box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+	width: 100%;
+	right: 100%;
+}
+
+figure.foto-legenda figcaption {
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	background-color: rgba(0, 0, 0, .4);
+	color: white;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;	
+	transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption {
+	opacity: 1;
+}
+
+/* Formatação do menu */
+nav#menu {
+    display: block;
+    background-color: rgb(230, 221, 221);
+} 
+
+nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -20px;
+	left: 540px;
+	}
+
+nav#menu li {
+    display: inline-block;
+	padding: 10px;
+	margin: 2px;
+	-webkit-transition:background-color 1s;
+    -moz-transition:background-color 1s;
+    -o-transition:background-color 1s;
+    transition:background-color 1s;
+}
+
+nav#menu li:hover {
+    display: inline;
+	background-color: #c2bdbd;
+}
+
+nav#menu h1 {
+	display: none;
+}
+
+nav#menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav#menu a:hover {
+	color: #ffffff;
+}
+
+section#corpo {
+	display: block;
+	width: 507px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding-right: 15px;
+}
+
+article#noticia-principal h2 {
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-article h1 {
+	font-family: 'FonteLogo', sans-serif;
+	color: red;	
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+header#cabecalho-article h2 {
+	font-size: 13pt;
+	color: rgb(5, 118, 133);
+	background-color: #ffffff;
+	margin-top: 0px;
+}
+
+.direita {
+	text-align: right;
+}
+
+header#cabecalho-article h3 {
+	font-size: 12pt;
+	color: blue;
+	margin-bottom: 0px;
+	
+}
+
+table#tabelaspec {
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#tabelaspec td {
+	border: 1px solid #606060;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table#tabelaspec td.ce {
+	color: #ffffff;
+	background-color: #606060;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+table#tabelaspec td.cd {
+	background-color: #cecece;
+
+}
+
+table#tabeleaspec caption {
+	color: #888888;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+table#tabelaspec caption span {
+	display: block;
+	float: right;
+	color: #000000;
+	font-size: 8pt;
+	margin-top: 10px;
+}
+
+aside#lateral {
+	display: block;
+	width: 400px;
+	float: right;
+	background-color: #c5d7db;
+	padding: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+aside#lateral h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #dddddd;
+	margin-top: 0px;
+}
+
+aside#lateral h2 {
+	background-color: #dddddd;
+	font-size: 13pt;
+	color: #085e74;
+	padding: 
+}
+
+footer#rodape {
+	clear: both;
+	border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+	text-align: center;
+}
+
+footer#rodape a {
+	text-decoration: none;
+	color: #000000;
+}
+
+footer#rodape a:hover {
+	color: blue;
+}
